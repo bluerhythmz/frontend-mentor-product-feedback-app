@@ -2,12 +2,14 @@ import { useFeedback } from '../../contexts/FeedbackContext'
 import Feedback from '../Feedback/Feedback'
 import { Outlet } from 'react-router-dom'
 import FeedbackMenu from '../FeedbackMenu/FeedbackMenu'
+import Header from './Header/Header'
 
 const FeedbackList = () => {
   const { allFeedback } = useFeedback()
   console.log(allFeedback)
   return (
   <>
+  <Header />
   <FeedbackMenu />
     <ul>
       {

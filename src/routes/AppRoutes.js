@@ -4,6 +4,7 @@ import FeedbackDetails from "../components/FeedbackDetails/FeedbackDetails";
 import EditFeedback from "../components/EditFeedback/EditFeedback";
 import { useFeedback } from "../contexts/FeedbackContext";
 import AddFeedback from "../components/AddFeedback/AddFeedback";
+import Roadmap from "../components/Roadmap/Roadmap";
 
 const AppRoutes = () => {
   const { currentFeedback } = useFeedback()
@@ -14,7 +15,8 @@ const AppRoutes = () => {
       element: <FeedbackDetails />,
     },
     { path: "edit", element: <EditFeedback currentFeedback={currentFeedback} /> },
-    { path: "add", element: <AddFeedback /> }
+    { path: "add", element: <AddFeedback /> },
+    { path: "roadmap", element: <Roadmap /> },
   ];
   return useRoutes(routes);
 };
