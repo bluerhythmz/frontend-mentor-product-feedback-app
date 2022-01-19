@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { useFeedback } from '../../contexts/FeedbackContext'
+import { useFeedback } from '../../../contexts/FeedbackContext'
 import { useNavigate } from 'react-router-dom'
-import Button from '../Button/Button'
+import Button from '../../Button/Button'
 
 const Form = ({ feedbackTitle, feedbackDescription }) => {
   const [title, setTitle] = useState(feedbackTitle)

@@ -1,13 +1,14 @@
 import { useFeedback } from '../../contexts/FeedbackContext'
 import Feedback from '../Feedback/Feedback'
 import { Outlet } from 'react-router-dom'
+import FeedbackMenu from '../FeedbackMenu/FeedbackMenu'
 
 const FeedbackList = () => {
   const { allFeedback } = useFeedback()
-  /* const { productRequests } = data
-  console.log(productRequests) */
+  console.log(allFeedback)
   return (
   <>
+  <FeedbackMenu />
     <ul>
       {
         allFeedback.map(request => (

@@ -3,6 +3,7 @@ import FeedbackList from "../components/FeedbackList/FeedbackList";
 import FeedbackDetails from "../components/FeedbackDetails/FeedbackDetails";
 import EditFeedback from "../components/EditFeedback/EditFeedback";
 import { useFeedback } from "../contexts/FeedbackContext";
+import AddFeedback from "../components/AddFeedback/AddFeedback";
 
 const AppRoutes = () => {
   const { currentFeedback } = useFeedback()
@@ -12,7 +13,8 @@ const AppRoutes = () => {
       path: "/feedback/:id",
       element: <FeedbackDetails />,
     },
-    { path: "edit", element: <EditFeedback currentFeedback={currentFeedback} /> }
+    { path: "edit", element: <EditFeedback currentFeedback={currentFeedback} /> },
+    { path: "add", element: <AddFeedback /> }
   ];
   return useRoutes(routes);
 };

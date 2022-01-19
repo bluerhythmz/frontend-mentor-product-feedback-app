@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import Form from '../Form/Form'
+import Form from './Form/Form'
 import GoBackButton from '../GoBackButton/GoBackButton'
 
 const EditFeedback = ({ currentFeedback }) => {
